@@ -68,8 +68,9 @@ async def cancel(update: Update, context: CallbackContext):
     return ConversationHandler.END
 
 # تنظیم ربات
-def main():
-    application = Application.builder().token("TTB").build()
+import os
+TTB = os.getenv("TTB")
+application = Application.builder().token(TTB).build()
 
     conversation_handler = ConversationHandler(
         entry_points=[CommandHandler("start", start)],
