@@ -69,7 +69,7 @@ async def cancel(update: Update, context: CallbackContext):
 
 # تنظیم ربات
 def main():
-    application = Application.builder().token("TTB").build()
+    application = Application.builder().token("T_T_B").build()
 
     conversation_handler = ConversationHandler(
         entry_points=[CommandHandler("start", start)],
