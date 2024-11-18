@@ -88,7 +88,8 @@ def main():
     # ساخت اپلیکیشن
     application = Application.builder().token(token).build()
 
-    # تعریف و اضافه کردن ConversationHandler
+    # تعریف و اضافه کردن 
+ConversationHandler
     conversation_handler = ConversationHandler(
         entry_points=[CommandHandler("start", start)],
         states={
