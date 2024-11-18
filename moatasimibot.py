@@ -1,3 +1,4 @@
+import os
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ConversationHandler, CallbackContext
 
@@ -67,9 +68,8 @@ async def cancel(update: Update, context: CallbackContext):
     await update.message.reply_text("فرآیند دریافت اطلاعات متوقف شد.")
     return ConversationHandler.END
 
-# تنظیم ربات
-def main():
-    application = Application.builder().token("T_T_B").build()
+token = os.getenv("TELEGRAM_BOT_TOKEN")
+bot = Bot(token=token)
 
     conversation_handler = ConversationHandler(
         entry_points=[CommandHandler("start", start)],
