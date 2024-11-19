@@ -69,7 +69,8 @@ async def get_details(update: Update, context: CallbackContext):
     await update.message.reply_text(
         f"اطلاعات شما به شرح زیر است:\n{message}\nآدرس‌ها:\n"
         "هرات: درب خوش، مارکت تجارتی معراج فیضی، دوکان نمبر 52ـ52\n"
-        "غور: مارکت موتورسیکلت فروشان، دوکان سید احمد مرادی")
+        "غور: مارکت موتورسیکلت فروشان، دوکان سید احمد مرادی"
+    )
     
     # بازگشت به حالت اولیه
     return ConversationHandler.END
@@ -87,8 +88,7 @@ def main():
     # ساخت اپلیکیشن
     application = Application.builder().token(token).build()
 
-    # تعریف و اضافه کردن 
-ConversationHandler
+    # تعریف و اضافه کردن ConversationHandler
     conversation_handler = ConversationHandler(
         entry_points=[CommandHandler("start", start)],
         states={
